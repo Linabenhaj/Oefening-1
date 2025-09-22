@@ -19,5 +19,45 @@
             string keuze = Console.ReadLine();
 
             string resultaat = "";
+
+            switch (keuze)
+            {
+                case "1": // For-loop
+                    for (int i = tekst.Length - 1; i >= 0; i--)
+                        resultaat += tekst[i];
+                    break;
+
+                case "2": // While-loop
+                    int i = tekst.Length - 1;
+                    while (i >= 0)
+                    {
+                        resultaat += tekst[i];
+                        i--;
+                    }
+                    break;
+
+                case "3": // Do-while-loop
+                    i = tekst.Length - 1;
+                    if (tekst.Length > 0)
+                    {
+                        do
+                        {
+                            resultaat += tekst[i];
+                            i--;
+                        } while (i >= 0);
+                    }
+                    break;
+
+                case "4": // Recursie met First en Last(
+                    resultaat = OmkerenRecursief(tekst);
+                    break;
+
+                default:
+                    Console.WriteLine("Ongeldige keuze!");
+                    return;
+            }
+
+            Console.WriteLine($"\nOmgekeerde tekst: {resultaat}");
+        }
     }
     }
