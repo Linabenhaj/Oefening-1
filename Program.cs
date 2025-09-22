@@ -59,5 +59,11 @@
 
             Console.WriteLine($"\nOmgekeerde tekst: {resultaat}");
         }
+
+        static string OmkerenRecursief(string s)
+        {
+            if (!s.Any()) return s; 
+            return OmkerenRecursief(s.Skip(1).ToArray()) + s.First();
+        }
     }
     }
