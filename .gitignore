@@ -1,0 +1,14 @@
+# Visual Studio build folders
+bin/
+obj/
+*.user
+*.suo
+
+# Windows systeem bestanden
+.Bin/
+Config.Msi/
+PerfLogs/
+Recovery/
+System Volume Information/
+*.tmp
+*.log
